@@ -144,8 +144,15 @@ main{
     	height: calc(100%); /* adjust this value based on the height of your bottom table */
 	
     }
-    footer {
-        text-align: center;
-    }
+footer {
+    text-align: center;
 }
+
+footer td:nth-child(1),
+footer td:nth-child(3) {
+    display: none;
+}
+
+}
+
 
