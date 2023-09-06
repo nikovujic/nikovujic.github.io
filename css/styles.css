@@ -1,0 +1,84 @@
+@font-face {
+	font-family: 'IBM Plex';
+	src: url('../fonts/plex-master/IBM-Plex-Mono/fonts/complete/woff2/IBMPlexMono-Regular.woff2') format('woff2'), url('../fonts/plex-master/IBM-Plex-Mono/fonts/complete/woff/IBMPlexMono-Regular.woff') format('woff');
+	font-weight:normal;
+	font-style: normal;
+	}
+.center-article{
+	margin-right:31%;
+	margin-left:31%;
+	font-size:14px;
+	font-family:'IBM Plex', sans-serif;
+}
+.hr-line{
+	margin-right:25%;
+	margin-left:25%;
+	height:1px;
+	border-bottom:0px;
+}
+.nav-container{
+	position:absolute;
+	}
+nav {
+  	position: fixed;
+ 	top: 0;
+  	left: 0;
+ 	width: 100%;
+  	display: flex;
+  	font-family: 'IBM Plex', sans-serif;
+  	align-items: center;
+  	justify-content: space-between;
+  	background-color: white;
+  	border-bottom:1px solid black;
+  	z-index: 2;
+
+	}
+.left{
+	display:flex;
+	font-weight: normal;
+	font-size: 12px;
+	}
+.center{
+	flex-grow: 1;
+	position: absolute;
+	margin-left: calc(45%);		
+	}
+nav li{
+	display:inline;	
+	}
+nav a{
+	color: black;
+	text-decoration: none;
+	margin-right: 10px;
+	}	
+.vl-left {
+	z-index:1;
+   	position: fixed;
+    	left: 25%;
+    	top:40px;
+    	bottom: 20px; /* adjust this value based on the height of your bottom table */
+    	margin-left: 0;
+    	border-left: 1px solid black;
+    	height: calc(100%); /* adjust this value based on the height of your bottom table */
+	}	
+.vl-right {
+	z-index:1;
+   	position: fixed;
+   	right: 25%;
+    	top:40px;
+    	bottom: 0; /* adjust this value based on the height of your bottom table */
+    	margin-left: 0;
+    	border-left: 1px solid black;
+    	height: calc(100%); /* adjust this value based on the height of your bottom table */
+	}	
+body{
+	margin: 0;
+	height: 100%;
+	}
+main{
+	min-height: 100vh;
+	margin-bottom: -20px;
+	}
+footer, .push{
+	height:20px;
+	}
