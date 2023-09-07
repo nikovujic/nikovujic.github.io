@@ -1,11 +1,12 @@
-
-
+/*-FONTS-*/
 @font-face {
 	font-family: 'IBM Plex';
 	src: url('../fonts/plex-master/IBM-Plex-Mono/fonts/complete/woff2/IBMPlexMono-Regular.woff2') format('woff2'), url('../fonts/plex-master/IBM-Plex-Mono/fonts/complete/woff/IBMPlexMono-Regular.woff') format('woff');
 	font-weight:normal;
 	font-style: normal;
-	}
+}
+
+/*-CLASSES_FOR_USE_IN_ARTICLES-*/
 .center-article{
 	margin-right:31%;
 	margin-left:31%;
@@ -18,43 +19,48 @@
 	height:1px;
 	border-bottom:0px;
 }
-.nav-container{
-	position:absolute;
-	}
 
+/*-NAVBAR-*/
 nav {
   	position: fixed;
  	top: 0;
   	left: 0;
  	width: 100%;
-  	display: flex;
   	font-family: 'IBM Plex', sans-serif;
-  	align-items: center;
-  	justify-content: space-between;
   	background-color: white;
   	border-bottom:1px solid black;
   	z-index: 2;
-
-	}
+}
 .left{
-	display:flex;
 	font-weight: normal;
 	font-size: 12px;
-	}
+}
 .center{
-	display: inline-block;
-	flex-grow: 1;
-	position: absolute;
-	margin-left: calc(45%);		
-	}
+	display:block;
+	margin-top: -34px;
+	margin-bottom:10px;
+	margin-left: auto;
+	margin-right:auto;
+	text-align:center;
+}
+.logo{
+	padding: 1px 10px 2px;
+	font-size: 17px;
+	border: 1px solid black;
+	border-radius: 3px;
+	font-family:'IBM Plex', sans-serif;
+}
 nav li{
 	display:inline;	
-	}
+}
 nav a{
 	color: black;
 	text-decoration: none;
 	margin-right: 10px;
 	}	
+
+/*-VERTICAL_LINE_FORMATTING-*/
+
 .vl-left {
 	z-index:1;
    	position: fixed;
@@ -70,89 +76,80 @@ nav a{
    	position: fixed;
    	right: 25%;
     	top:40px;
-    	bottom: 0; /* adjust this value based on the height of your bottom table */
+    	bottom: 0;
     	margin-left: 0;
     	border-left: 1px solid black;
-    	height: calc(100%); /* adjust this value based on the height of your bottom table */
-	}	
+    	height: calc(100%);
+}
+
+/*-MAIN_PAGE_DESIGN-*/	
 body{
 	margin: 0;
 	height: 100%;
-	}
+}
 main{
 	min-height: 100vh;
 	margin-bottom: -20px;
-	}
+}
 footer, .push{
 	height:20px;
-	}
-	
-	
-	
+}
+
+/*-FORMATTING_FOR_MOBILE-*/
+
 @media screen and (max-width: 768px) {
-main{
-	margin-top:100px;
-}    
-
-    .center {
-	margin-left: calc(35%);
-	margin-bottom:25px;
-    }
-    .left {
-        text-align: center;
-        margin-top: 40px;
-	margin-left: 18%;
-    }
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    nav li {
-        display: inline-block;
-        margin-right: 10px;
-    }
-    .center-article {
-        margin-right: 7%;
-        margin-left: 7%;
-    }
-.hr-line{
-	margin-right:5%;
-	margin-left:5%;
-	height:1px;
-	border-bottom:0px;
-}
-
-    .vl-left{
-	z-index:1;
-   	position: fixed;
-    	left: 5%;
-    	top:40px;
-    	bottom: 20px; /* adjust this value based on the height of your bottom table */
-    	margin-left: 0;
-    	border-left: 1px solid black;
-    	height: calc(100%); /* adjust this value based on the height of your bottom table */
+	main{
+		margin-top:100px;
+	}    
+	.center {
+		position:relative;
+		text-align:center;
+		margin-bottom:40px;
 	}
-
-    .vl-right {
-        z-index:1;
-   	position: fixed;
-   	right: 5%;
-    	top:40px;
-    	bottom: 0; /* adjust this value based on the height of your bottom table */
-    	margin-left: 0;
-    	border-left: 1px solid black;
-    	height: calc(100%); /* adjust this value based on the height of your bottom table */
-	
-    }
-footer {
-    text-align: center;
+	.left {
+		position:relative;
+		top:30px;
+		text-align: center;
+	}
+	nav li {
+		list-style-type:none;
+		margin-right: 20px;
+	}
+	.center-article {
+		margin-right: 7%;
+		margin-left: 7%;
+	}
+	.hr-line{
+		margin-right:5%;
+		margin-left:5%;
+		height:1px;
+		border-bottom:0px;
+	}
+	.vl-left{
+		z-index:1;
+		position: fixed;
+		left: 5%;
+		top:40px;
+		bottom: 20px;
+		margin-left: 0;
+		border-left: 1px solid black;
+		height: calc(100%);
+	}
+	.vl-right {
+		z-index:1;
+   		position: fixed;
+   		right: 5%;
+    		top:40px;
+    		bottom: 0;
+    		margin-left: 0;
+    		border-left: 1px solid black;
+    		height: calc(100%);
+	}
+	footer {
+		text-align: center;
+	}
+	footer td:nth-child(1),
+	footer td:nth-child(3) {
+    		display: none;
+	}
 }
-
-footer td:nth-child(1),
-footer td:nth-child(3) {
-    display: none;
-}
-
-}
-
-
