@@ -1,3 +1,120 @@
+/*-DARK_MODE_CHANGES-*/
+
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode nav a{
+	color:white;
+}
+
+body.dark-mode .logo{
+	border: 1px solid white;
+}
+
+body.dark-mode .vl-left{
+	border-right:1px solid white;
+}
+
+body.dark-mode .vl-right{
+	border-left:1px solid white;
+}
+
+body.dark-mode .hr-line{
+	color: white;
+}
+
+body.dark-mode nav{
+	border-bottom: 1px solid white;
+	background-color: #333;
+}
+
+body.dark-mode .dark-mode-frame{
+	border:1px solid white;
+	background-color: #333;
+}
+
+body.dark-mode .footer-table{
+	background-color: dimgray;
+}
+
+body.dark-mode .footer-table td{
+	border: 1px solid white;
+	border-left: none;
+	border-right: none;
+}
+
+body.dark-mode .footer-table a{
+	color: white;
+}
+
+/*-SLIDER_SWITCHES: borrowed from https://www.w3schools.com/howto/howto_css_switch.asp-*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left:0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 8px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
 /*-FONTS-*/
 @font-face {
 	font-family: 'IBM Plex';
@@ -21,6 +138,8 @@
 }
 
 /*-NAVBAR-*/
+
+
 nav {
   	position: fixed;
  	top: 0;
@@ -44,11 +163,27 @@ nav {
 	text-align:center;
 }
 .logo{
-	padding: 1px 10px 2px;
+	padding: 1px 10px 3px;
 	font-size: 17px;
 	border: 1px solid black;
 	border-radius: 3px;
 	font-family:'IBM Plex', sans-serif;
+}
+.dark-mode-box{
+	position: fixed;
+	display: block;
+	margin-top:45px;
+	/*text-align:center;*/
+	font-size: 14px;
+	left: 50%;
+	transform: translate(-50%,0);
+
+}
+.dark-mode-frame{
+	border: 1px solid black;
+	padding: 5px 20px 5px 20px;
+	border-radius: 0 0 5px 5px;
+	background-color:white;
 }
 nav li{
 	display:inline;	
@@ -95,6 +230,22 @@ footer, .push{
 	height:20px;
 }
 
+.footer-table{
+	font-weight: normal;
+	font-size: 14px;
+	font-family:'IBM Plex', sans-serif;
+	width: 100%;
+	border: 1px solid black;
+	border-collapse:collapse;
+	background-color: silver;
+	text-align: center;
+	text-decoration: none;
+}
+
+.footer-table a{
+	color: black;
+}
+
 /*-FORMATTING_FOR_MOBILE-*/
 
 @media screen and (max-width: 768px) {
@@ -110,6 +261,14 @@ footer, .push{
 		position:relative;
 		top:30px;
 		text-align: center;
+	}
+	.dark-mode-box{
+		display: block;
+		margin-top:75px;
+		text-align:center;
+		font-size: 14px;
+		left: 50%;
+		transform: translate(-50%,0);	
 	}
 	nav li {
 		list-style-type:none;
@@ -153,3 +312,4 @@ footer, .push{
     		display: none;
 	}
 }
+

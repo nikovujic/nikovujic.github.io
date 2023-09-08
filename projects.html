@@ -4,12 +4,15 @@
 	<title>rojectLOG</title>
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 	<link rel="stylesheet" href="css/styles.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 	</style>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
-<body>
+<body style="font-family:'IBM Plex'">
 	<!--NAVBAR-->
+<div class="navbar">
 	<nav>
 	<div class="left" style="font-family:'IBM Plex', sans-serif;">
 	<ul>
@@ -17,14 +20,26 @@
 	<li><a href="projects.html">PROJECTS</a></li>
 	<li><a href="blog.html">BLOG</a></li>
 	<li><a href="about.html">ABOUT</a></li>
-	</ul>	
+	</ul>
 	</div>
 	<div class="center">
 	<a href="index.html">
-	<span style="padding: 1px 10px 2px; font-size: 17px; border: 1px solid black; border-radius:3px;font-family:'IBM Plex', sans-serif;">project<span style="font-weight: bold; font-family:'IBM Plex', sans-serif;">LOG</span></span>
+	<span class="logo">project<span style="font-weight: bold; font-family:'IBM Plex', sans-serif;">LOG</span></span>
 	</a>
 	</div>
-	</nav>
+
+</nav>
+
+<div class="dark-mode-box">
+<span class="dark-mode-frame">Dark mode: 
+<label class="switch">
+<input type="checkbox" id="modeToggle">
+<div class="slider round"></div>
+</label>
+</span>
+</div>
+</div>
+ 
 	<!--VERTICAL LINES-->
 	<div class="vl-left" ></div>
 	<div class="vl-right"></div>
@@ -32,11 +47,10 @@
 	<br><br><br>
 
 <!--CONTENT BEGIN-->
-<main>
-<article>
 
-</article>
-<div class="push"></div>
+
+<main>
+
 </main>
 <!--CONTENT END-->
 
@@ -44,16 +58,21 @@
 	<br>
 	</div>
 	<footer>
-	<table style="font-weight:normal; font-size:14px;font-family:'IBM Plex', sans-serif; width:100%; border: 1px solid black;border-collapse:collapse; background-color: silver">
+<!--	<table style="font-weight:normal; font-size:14px;font-family:'IBM Plex', sans-serif; width:100%; border: 1px solid black;border-collapse:collapse; background-color: silver">
+-->
+	<table class="footer-table">
+
 		<tr>
-			<td style="width: 25%; text-align: center;"></td>
-		  	<td style="text-align: center;"><a style="text-decoration: none;color: black;" href="#top">BACK TO TOP</a></td>
-			<td style="width: 25%; text-align: center;"></td>
+			<td style="width: 25%;"></td>
+		  	<td ><a style="text-decoration: none" href="#top">BACK TO TOP</a></td>
+			<td style="width: 25%;"></td>
 		</tr>
 		<tr>
 			<th colspan="3" style="border:1px solid black;text-align: center; font-weight:normal; width:40%;">&copy; 2023 project<span style="font-weight:bold;">LOG</span></th>
 		</tr>
 	</table>
 	</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
