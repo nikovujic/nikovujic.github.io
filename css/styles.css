@@ -32,6 +32,7 @@ body.dark-mode nav{
 
 body.dark-mode .dark-mode-frame{
 	border:1px solid white;
+	border-top:none;
 	background-color: #333;
 }
 
@@ -181,7 +182,8 @@ nav {
 }
 .dark-mode-frame{
 	border: 1px solid black;
-	padding: 5px 25px 5px 25px;
+	border-top:none;
+	padding: 10px 20px 10px 20px;
 	border-radius: 0 0 5px 5px;
 	background-color:white;
 }
